@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function distribuirCaracter(){
+        var entrada = document.getElementById('texto').value
+        document.getElementById('texto').value = ''
+    
+
+        entrada.trim()
+        switch(entrada){
+            case '0':
+            case '1':
+            case '2':
+            case '3':
+            case '4':
+            case '5':
+            case '6':
+            case '7':
+            case '8':
+            case '9':
+                document.getElementById('numeros').value += entrada
+                break
+            default:
+                document.getElementById('letras').value += entrada
+            
+        }
+    }
+</script>
+<body>
+    <input type="text" name="texto" id="texto" placeholder="Digite um caracter aqui" onkeyup="distribuirCaracter()">
+
+    <hr>
+
+    <label for="letras">Letras: </label>
+    <input type="text" name="letras" id="letras" disabled>
+
+    <label for="numeros">Números: </label>
+    <input type="text" name="numeros" id="numeros" disabled>
+
+   
+</body>
+</html>
