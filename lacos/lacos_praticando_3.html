@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array</title>
+    <title>Document</title>
 </head>
 <body>
     <script>
-        var lista_frutas = ['Banana', 'Maçã']
-
-        lista_frutas.push('Uva')
-        lista_frutas.unshift('Morango')
-        console.log(lista_frutas)
+        var lista = ['Abacaxi', 34, 'Tudo', 'Nada']
+        for (var i = 0; i < lista.length; i++) {
+            document.write(lista[i] + '<br />')       
+        }
     </script>
 </body>
 </html>

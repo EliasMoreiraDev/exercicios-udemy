@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForEach</title>
+</head>
+<body>
+    <script>
+        /*var listaFuncionarios = ['Viviane', 'João','Maria','Ana']
+
+        document.write(listaFuncionarios[1])
+        listaFuncionarios.forEach(function(valor,indice,array){
+            console.log('indice ' + indice +' valor ' + valor)
+            if(valor == 'João'){
+                array[indice] = 'Um novo valor'
+            }
+            console.log(listaFuncionarios
+            )
+        })
+        document.write('<br />' + listaFuncionarios[1])*/
+        //var listaFuncionarios = ['Viviane', 'João','Maria','Ana']
+        var listaFuncionarios = []
+        listaFuncionarios['x'] = 'Viviane'
+        listaFuncionarios[false] = 'João'
+        listaFuncionarios[2] = 'Maria'
+
+        var f = (function(valor, indice){
+            console.log(valor, indice)
+        })
+
+        document.write(listaFuncionarios['x'])
+        listaFuncionarios.forEach(f)
+        
+    </script>
+</body>
+</html>

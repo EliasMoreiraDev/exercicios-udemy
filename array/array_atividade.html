@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        
+            <input type="text" name="texto" id="texto">
+            <button onclick="adicionar()">Adicionar</button>
+            <button onclick="ordenar()">Ordenar</button>
+            <p>
+                <div id="txtordenar"></div>
+            </p>
+    <script>
+        var texto = document.getElementById('texto').value
+        var objetos = ['Cadeira', 'Impressora', 'Garfo']
+          
+
+        function adicionar(){
+            var texto = document.getElementById('texto').value
+            
+            if(texto != ''){
+                
+                if(objetos.indexOf(texto) !== -1){
+                    alert('Objeto já foi adicionado')
+                
+                }
+                else if(objetos.indexOf(texto) === -1){
+                    objetos.push(texto) 
+                    console.log(objetos)  
+                    document.getElementById('texto').value = ''
+                }
+            }
+            else{
+                
+                alert('Valor inválido')
+            }
+
+        }
+        function ordenar(){
+            var txtordenar = document.getElementById('txtordenar')
+            txtordenar.innerHTML = objetos.sort()
+           console.log(objetos.sort())
+        }
+    </script>
+</body>
+</html>
