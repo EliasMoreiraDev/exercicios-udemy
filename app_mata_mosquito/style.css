@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+html{
+    cursor: url('imagens/imagens/mata_mosca.png') 30 30, auto;
+}
 @media screen and (min-width:830px){
     body{
         background: url('imagens/imagens/bg.jpg') no-repeat;
@@ -32,7 +35,7 @@
 }
 .painel{
     position: absolute;
-    width: 190px;
+    width: 200px;
     padding: 10px;
     bottom: 0px;
     left: 0px;

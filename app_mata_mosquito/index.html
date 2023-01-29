@@ -4,23 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mata Mosquito</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Game Over</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style_vitória_derrota.css">
 </head>
-<body onresize="redimencionarPalco()">
 
-    <div class="painel">
-        <div class="vida">
-            <img id="v1" src="imagens/imagens/coracao_cheio.png" alt="">
-            <img id="v2" src="imagens/imagens/coracao_cheio.png" alt="">
-            <img id="v3" src="imagens/imagens/coracao_cheio.png" alt="">
-        </div>
-        <div class="tempo">Tempo restante: </div>
+<body>
+    <div id="painel">
+        <img src="imagens/imagens/game.png" alt=""><br>
+        
+        <select name="dificuldade" id="dificuldade">
+            <option value="">--Selecione o Nível--</option>
+            <option value="normal">Normal</option>
+            <option value="difícil">Difícil</option>
+            <option value="hardcore">Hardcore</option>
+        </select><br>
+        <button type="button" id="botao-inicio" 
+        onclick="iniciarJogo()">Iniciar</button>
     </div>
-    
-    <script src="script.js"></script>
+
     <script>
-        setInterval(function(){posicaoRandomica()},1000)
+        function iniciarJogo(){
+
+            var nivel = document.getElementById('dificuldade').value
+
+            if(nivel === ''){
+                alert('Selecione um nível para iniciar')
+                return false
+            }
+
+            window.location.href = 'tela_jogo.html?' + nivel//conseguimos enviar um parametro junto do link da página
+        }
     </script>
 </body>
 </html>

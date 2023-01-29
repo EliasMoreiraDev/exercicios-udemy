@@ -1,6 +1,20 @@
 var altura = 0
 var largura = 0
 var vidas = 1
+var tempo = 60
+
+var criamoscatempo = 1500
+
+var nivel = window.location.search
+nivel = nivel.replace('?','')
+
+if(nivel === 'normal'){
+    criamoscatempo = 1500
+}else if(nivel === 'dificil'){
+    criamoscatempo = 1000
+}else if(nivel ==='hardcore'){
+    criamoscatempo = 700
+}
 function redimencionarPalco(){
     altura = window.innerHeight
     largura = window.innerWidth
@@ -8,12 +22,25 @@ function redimencionarPalco(){
 }
 redimencionarPalco()
 
+var cronometro = setInterval(function(){
+    tempo -= 1
+    if(tempo < 0){
+        window.location.href = 'tela_vitoria.html'
+    }else{
+        document.getElementById('tempo').innerHTML = tempo
+    }
+    
+}, 1000)
+
+
+
+
 function posicaoRandomica() {
 
     if(document.getElementById('mosquito')){
         document.getElementById('mosquito').remove()
         
-        if(vidas>3){
+        if(vidas>=3){
             window.location.href = 'game_over.html'
         }else{
         document.getElementById('v' + vidas).src = 'imagens/imagens/coracao_vazio.png'
