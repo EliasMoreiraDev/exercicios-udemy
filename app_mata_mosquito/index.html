@@ -8,7 +8,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body onresize="redimencionarPalco()">
+
+    <div class="painel">
+        <div class="vida">
+            <img id="v1" src="imagens/imagens/coracao_cheio.png" alt="">
+            <img id="v2" src="imagens/imagens/coracao_cheio.png" alt="">
+            <img id="v3" src="imagens/imagens/coracao_cheio.png" alt="">
+        </div>
+        <div class="tempo">Tempo restante: </div>
+    </div>
     
     <script src="script.js"></script>
+    <script>
+        setInterval(function(){posicaoRandomica()},1000)
+    </script>
 </body>
 </html>
