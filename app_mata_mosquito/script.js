@@ -3,17 +3,17 @@ var largura = 0
 var vidas = 1
 var tempo = 60
 
-var criamoscatempo = 1500
+var criamoscatempo = 5000
 
 var nivel = window.location.search
 nivel = nivel.replace('?','')
 
 if(nivel === 'normal'){
-    criamoscatempo = 1500
+    criamoscatempo = 5000
 }else if(nivel === 'dificil'){
-    criamoscatempo = 1000
+    criamoscatempo = 3000
 }else if(nivel ==='hardcore'){
-    criamoscatempo = 700
+    criamoscatempo = 1000
 }
 function redimencionarPalco(){
     altura = window.innerHeight
